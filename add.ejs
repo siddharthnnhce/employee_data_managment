@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Employee</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Add New Employee</h1>
+    <form method="POST" action="/add">
+        <label for="first_name">First Name:</label>
+        <input type="text" name="first_name" id="first_name" placeholder="First Name" required>
+
+        <label for="last_name">Last Name:</label>
+        <input type="text" name="last_name" id="last_name" placeholder="Last Name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" placeholder="Email" required>
+
+        <label for="department">Department:</label>
+        <input type="text" name="department" id="department" placeholder="Department" required>
+
+        <label for="salary">Salary:</label>
+        <input type="number" name="salary" id="salary" placeholder="Salary" required>
+
+        <button type="submit">Add Employee</button>
+    </form>
+    <a href="/">Back to Employee List</a>
+</body>
+</html>

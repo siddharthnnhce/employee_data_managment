@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Management</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Employee List</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th><th>Name</th><th>Email</th><th>Department</th><th>Salary</th>
+        </tr>
+        <% employees.forEach(emp => { %>
+        <tr>
+            <td><%= emp[0] %></td>
+            <td><%= emp[1] %> <%= emp[2] %></td>
+            <td><%= emp[3] %></td>
+            <td><%= emp[4] %></td>
+            <td><%= emp[5] %></td>
+        </tr>
+        <% }) %>
+    </table>
+    <h2>Add Employee</h2>
+    <form method="POST" action="/add">
+        <input type="text" name="first_name" placeholder="First Name" required>
+        <input type="text" name="last_name" placeholder="Last Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="text" name="department" placeholder="Department" required>
+        <input type="number" name="salary" placeholder="Salary" required>
+        <button type="submit">Add</button>
+    </form>
+</body>
+</html>
